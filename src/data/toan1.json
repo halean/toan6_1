@@ -1,0 +1,10 @@
+{
+  "title":"Bài 1: Tập hợp và Phần tử",
+  "content": "Cho tập hợp A = {1, 3, 5, 7, 9}. Hãy viết tập hợp B gồm các số chẵn nhỏ hơn 10. Liệt kê các phần tử thuộc cả hai tập hợp A và B.\nXác định xem 6 có thuộc tập hợp A không? Giải thích tại sao.",
+"python_code": "# Bài 1: Tập hợp và Phần tử\nA = {1, 3, 5, 7, 9}\nB = {x for x in range(10) if x % 2 == 0}  # Tập hợp B gồm các số chẵn nhỏ hơn 10\ncommon_elements = A.intersection(B)\nis_six_in_A = 6 in A",
+"solution": "Tập hợp A: {1, 3, 5, 7, 9}\nTập hợp B (các số chẵn nhỏ hơn 10): {0, 2, 4, 6, 8}\nCác phần tử thuộc cả hai tập hợp A và B: (Không có phần tử nào)\nKiểm tra xem 6 có thuộc tập hợp A không: Không (False)",
+"trinket": "2b12f4a390"
+
+}
+
+
