@@ -1,0 +1,36 @@
+[{
+  "title": "Bài 1: Tập hợp và Phần tử",
+  "content": "Cho tập hợp A = {1, 3, 5, 7, 9}. Hãy viết tập hợp B gồm các số chẵn nhỏ hơn 10. Liệt kê các phần tử thuộc cả hai tập hợp A và B.\n\nXác định xem 6 có thuộc tập hợp A không? Giải thích tại sao.",
+  "python_code": "# Bài 1: Tập hợp và Phần tử\nA = {1, 3, 5, 7, 9}\nB = {x for x in range(10) if x % 2 == 0}  # Tập hợp B gồm các số chẵn nhỏ hơn 10\ncommon_elements = A.intersection(B)\nis_six_in_A = 6 in A",
+  "solution": "Tập hợp A: {1, 3, 5, 7, 9}\nTập hợp B (các số chẵn nhỏ hơn 10): {0, 2, 4, 6, 8}\nCác phần tử thuộc cả hai tập hợp A và B: (Không có phần tử nào)\nKiểm tra xem 6 có thuộc tập hợp A không: Không (False)",
+  "trinket": "2b12f4a390",
+  "code_explain": "<ul><li><code>A = {1, 3, 5, 7, 9}</code>: Tạo tập hợp A chứa các số nguyên 1, 3, 5, 7, và 9.</li><li><code>B = {x for x in range(10) if x % 2 == 0}</code>: Tạo tập hợp B gồm các số chẵn nhỏ hơn 10 bằng cách sử dụng set comprehension. <code>range(10)</code> tạo ra dãy số từ 0 đến 9. <code>x % 2 == 0</code> kiểm tra xem x có phải là số chẵn.</li><li><code>common_elements = A.intersection(B)</code>: Tìm tập hợp các phần tử chung giữa A và B sử dụng phương thức <code>intersection()</code>.</li><li><code>is_six_in_A = 6 in A</code>: Kiểm tra xem số 6 có nằm trong tập hợp A hay không. Trả về <code>True</code> nếu 6 là phần tử của A, và <code>False</code> nếu không. Trong trường hợp này, kết quả là <code>False</code> vì 6 không phải là phần tử của A.</li></ul>"
+},
+{
+  "title": "Bài 2: Cách biểu diễn tập hợp",
+  "content": "Viết tập hợp C gồm các số tự nhiên nhỏ hơn 5 bằng hai cách: liệt kê phần tử và chỉ ra tính chất đặc trưng.\n\nCho tập hợp D = {x | x là số tự nhiên, 2 < x < 7}. Hãy liệt kê các phần tử của tập hợp D.",
+  "python_code": "# Bài 2: Cách biểu diễn tập hợp\nC_by_listing = {0, 1, 2, 3, 4}\nC_by_property = {x for x in range(5)}  # Số tự nhiên nhỏ hơn 5\nD = {x for x in range(3, 7)}  # Số tự nhiên lớn hơn 2 và nhỏ hơn 7",
+  "solution": "Tập hợp C bằng cách liệt kê phần tử: {0, 1, 2, 3, 4}\nTập hợp C bằng cách chỉ ra tính chất đặc trưng (số tự nhiên nhỏ hơn 5): {0, 1, 2, 3, 4}\nTập hợp D (số tự nhiên lớn hơn 2 và nhỏ hơn 7): {3, 4, 5, 6}",
+  "trinket": "cd688c17ab",
+  "code_explain": "<ul><li><code>C_by_listing = {0, 1, 2, 3, 4}</code>: Định nghĩa tập hợp C bằng cách liệt kê trực tiếp các phần tử.</li><li><code>C_by_property = {x for x in range(5)}</code>: Định nghĩa tập hợp C bằng cách sử dụng set comprehension để tạo ra các số tự nhiên nhỏ hơn 5.</li><li><code>D = {x for x in range(3, 7)}</code>: Tạo tập hợp D chứa các số tự nhiên lớn hơn 2 và nhỏ hơn 7 bằng cách sử dụng set comprehension.</li></ul>"
+},
+{
+  "title": "Bài 3: Vận dụng",
+  "content": "Cho tập hợp E = {x | x là chữ cái trong từ \"MATHEMATICS\"}. Liệt kê các phần tử của E.\n\nTìm tập hợp F gồm các số tự nhiên lẻ từ 1 đến 15. Sau đó, xác định các phần tử thuộc tập hợp E nhưng không thuộc tập hợp F.",
+  "python_code": "# Bài 3: Vận dụng\nword = \"MATHEMATICS\"\nE = set(word)\nF = {x for x in range(1, 16) if x % 2 != 0}\nelements_in_E_not_in_F = E.difference(F)",
+  "solution": "Tập hợp E (chữ cái trong từ \"MATHEMATICS\"): {'A', 'C', 'E', 'H', 'I', 'M', 'S', 'T'}\nTập hợp F (số tự nhiên lẻ từ 1 đến 15): {1, 3, 5, 7, 9, 11, 13, 15}\nCác phần tử thuộc E nhưng không thuộc F: {'A', 'C', 'E', 'H', 'I', 'M', 'S', 'T'}",
+  "code_explain": "<ul><li><code>word = \"MATHEMATICS\"</code>: Định nghĩa một chuỗi biểu diễn từ \"MATHEMATICS\".</li><li><code>E = set(word)</code>: Tạo tập hợp E chứa các chữ cái duy nhất trong từ \"MATHEMATICS\".</li><li><code>F = {x for x in range(1, 16) if x % 2 != 0}</code>: Tạo tập hợp F gồm các số tự nhiên lẻ từ 1 đến 15.</li><li><code>elements_in_E_not_in_F = E.difference(F)</code>: Tìm các phần tử thuộc E nhưng không thuộc F sử dụng phương thức <code>difference()</code>.</li></ul>",
+  "trinket": "f4d6bf377b"
+
+},
+{
+  "title": "Bài 4: Biểu diễn Số Tự Nhiên bằng Chữ Số La Mã",
+  "content": "Biểu diễn số 14 và 29 bằng chữ số La Mã.",
+  "python_code": "",
+  "solution": "Số 14 trong chữ số La Mã: XIV\nSố 29 trong chữ số La Mã: XXIX",
+  "code_explain": "<p><strong>Định nghĩa hàm <code>int_to_roman(num)</code>:</strong></p><ol><li>Hàm này chuyển đổi một số tự nhiên (<code>num</code>) sang dạng chữ số La Mã.</li><li>Hai mảng <code>val</code> và <code>syb</code> lần lượt chứa các giá trị số và ký hiệu La Mã tương ứng.</li><li><code>roman_num</code> là chuỗi rỗng được khởi tạo để lưu trữ kết quả La Mã.</li><li>Trong vòng lặp <code>while</code>, mã sẽ kiểm tra từng giá trị trong <code>val</code> bắt đầu từ giá trị lớn nhất, thêm ký hiệu La Mã vào <code>roman_num</code> và giảm <code>num</code> tương ứng.</li><li>Quá trình lặp diễn ra cho đến khi <code>num</code> bằng 0.</li></ol>",
+  "trinket":"adb12410b5"
+}
+
+]
+
