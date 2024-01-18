@@ -1,10 +1,23 @@
-{
+[{
   "title":"Bài 1: Tập hợp và Phần tử",
-  "content": "Cho tập hợp A = {1, 3, 5, 7, 9}. Hãy viết tập hợp B gồm các số chẵn nhỏ hơn 10. Liệt kê các phần tử thuộc cả hai tập hợp A và B.\nXác định xem 6 có thuộc tập hợp A không? Giải thích tại sao.",
+  "content": "Cho tập hợp A = {1, 3, 5, 7, 9}. Hãy viết tập hợp B gồm các số chẵn nhỏ hơn 10. Liệt kê các phần tử thuộc cả hai tập hợp A và B.\n\nXác định xem 6 có thuộc tập hợp A không? Giải thích tại sao.",
 "python_code": "# Bài 1: Tập hợp và Phần tử\nA = {1, 3, 5, 7, 9}\nB = {x for x in range(10) if x % 2 == 0}  # Tập hợp B gồm các số chẵn nhỏ hơn 10\ncommon_elements = A.intersection(B)\nis_six_in_A = 6 in A",
 "solution": "Tập hợp A: {1, 3, 5, 7, 9}\nTập hợp B (các số chẵn nhỏ hơn 10): {0, 2, 4, 6, 8}\nCác phần tử thuộc cả hai tập hợp A và B: (Không có phần tử nào)\nKiểm tra xem 6 có thuộc tập hợp A không: Không (False)",
 "trinket": "2b12f4a390"
+},
+{
+  "title": "Bài 2: Cách biểu diễn tập hợp:",
+  "content": "Viết tập hợp C gồm các số tự nhiên nhỏ hơn 5 bằng hai cách: liệt kê phần tử và chỉ ra tính chất đặc trưng.\nCho tập hợp D = {x | x là số tự nhiên, 2 < x < 7}. Hãy liệt kê các phần tử của tập hợp D.",
+  "solution": "Tập hợp C (số tự nhiên nhỏ hơn 5) bằng cách liệt kê phần tử: {0, 1, 2, 3, 4}\nTập hợp C bằng cách chỉ ra tính chất đặc trưng (số tự nhiên nhỏ hơn 5): {0, 1, 2, 3, 4}\nTập hợp D (số tự nhiên lớn hơn 2 và nhỏ hơn 7): {3, 4, 5, 6}",
+  "python_code": "# Bài 2: Cách biểu diễn tập hợp\nC_by_listing = {0, 1, 2, 3, 4}\nC_by_property = {x for x in range(5)}  # Số tự nhiên nhỏ hơn 5\nD = {x for x in range(3, 7)}  # Số tự nhiên lớn hơn 2 và nhỏ hơn 7",
+  "trinket": "cd688c17ab"
+},
+{
 
+"title": "Bài 3: Vận dụng:",
+"content":"Cho tập hợp E = {x | x là chữ cái trong từ 'MATHEMATICS'}. Liệt kê các phần tử của E.<br/>Tìm tập hợp F gồm các số tự nhiên lẻ từ 1 đến 15. Sau đó, xác định các phần tử thuộc tập hợp E nhưng không thuộc tập hợp F.",
+"solution":"Tập hợp E (chữ cái trong từ 'MATHEMATICS'): {'A', 'C', 'E', 'H', 'I', 'M', 'S', 'T'}<br/>Tập hợp F (số tự nhiên lẻ từ 1 đến 15): {1, 3, 5, 7, 9, 11, 13, 15}<br/>Các phần tử thuộc E nhưng không thuộc F: {'A', 'C', 'E', 'H', 'I', 'M', 'S', 'T'}",
+"python_code":"# Bài 3: Vận dụng\nword = 'MATHEMATICS'\nE = set(word)\nF = {x for x in range(1, 16) if x % 2 != 0}\nelements_in_E_not_in_F = E.difference(F)\n\nE, F, elements_in_E_not_in_F",
+"trinket": "f4d6bf377b"
 }
-
-
+]
