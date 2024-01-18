@@ -4,13 +4,14 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Example from './components/Menu';
 import MathExercise from './components/MathExercise';
-import b1 from './data/toan1.json';
-import {Python, MongMuon, ToanLopSau} from "./components/Python"
+import b1 from './data/toan2.json';
+import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
+      
       <div className="flex h-screen flex-col overflow-hidden bg-gray-700 font-sans text-gray-900 antialiased">
         <header className="relative z-10 flex flex-shrink-0 items-center justify-between border-b border-gray-200 bg-gray-700 px-4 py-4 sm:px-6 lg:px-8">
           <span className="font-bold text-right text-white">Bài tập Toán lớp Sáu, kết hợp Python</span>
@@ -34,20 +35,19 @@ function App2() {
     <div className="flex text-lg font-semibold">Học toán lớp sáu bằng Python
     </div></div>
     <ul className="flex flex-col sm:flex-row mt-4 sm:mt-0">
-      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="#">Home</a></li>
-      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="#">About</a></li>
-      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="#">Services</a></li>
-      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="#">Contact</a></li>
+      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="/">Trang chủ</a></li>
+      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="/mong_muon">Ước vọng</a></li>
+      <li class="sm:ml-4 hover:bg-gray-700 p-2 rounded"><a href="/lien_he">Liên hệ</a></li>
     </ul>
   </nav>
     <div className="flex h-screen">
       
       <div id="sidebar" class="w-64 h-screen bg-gray-800 text-white p-5 hidden sm:block">
-        <h1 class="text-xl mb-4">Giới thiệu</h1>
+        <h1 class="text-xl mb-4"><a href="/">Giới thiệu</a></h1>
         <ul>
           <li class="mb-3 hover:bg-gray-700 p-2"><a href="/toan_lop_sau"> Toán lớp sáu</a></li>
           <li class="mb-3 hover:bg-gray-700 p-2"><a href="/Python">Python</a></li>
-          <li class="mb-3 hover:bg-gray-700 p-2"><a href="/mong_muon">Mong muốn</a></li>
+          <li class="mb-3 hover:bg-gray-700 p-2"><a href="/mong_muon">Ước vọng</a></li>
         </ul>
         <h1 class="text-xl mb-4">SỐ VÀ ĐẠI SỐ</h1>
         <ul>
@@ -62,13 +62,9 @@ function App2() {
       
       <Router>
       <Routes>
-        
         <Route path="/Python" element={<Python />} >
         </Route>
-        <Route path="/" element={<div class="flex-1 p-10">
-            <button class="sm:hidden mb-4" onclick="toggleSidebar()">☰ Menu</button>
-            <h2 class="text-2xl font-bold mb-5">Main Content</h2>
-          </div>}>
+        <Route path="/" element={<Main />}>
         </Route>
         <Route path="/tap_hop_so_tu_nhien" element={<App3 />} >
         </Route>
@@ -78,11 +74,11 @@ function App2() {
         <Route path="/toan_lop_sau" element={<ToanLopSau />}>
 
         </Route>
+        
       </Routes>
-     
       </Router>
+      
       </div>
- 
     </>
   );
 }
@@ -98,11 +94,22 @@ function App3(){
   
  
   return(
-    <div className="flex-auto p-10 overflow-y-auto items-start">
+    <div className="grid grid-flow-col">  
+    <div className="flex-row p-10 overflow-y-auto items-start">
     {b1.map(e =>
     <MathExercise exercise={e} />
   )}
     </div>
+    <div>
+      <ul className="w-64 h-scree np-5 hidden sm:block">
+      {b1.map(e => 
+      <li><a href={"#"+e.trinket}>{e.title}</a></li>
+      )
+      }
+      </ul>
+    </div>
+    </div>
+    
   )
 }
 export default App2;
