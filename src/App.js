@@ -7,6 +7,9 @@ import MathExercise from './components/MathExercise';
 import b1 from './data/toan2.json';
 import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import AppMarkdown from './data/python_set_vs_math.txt';
+
 
 function App() {
   return (
@@ -112,5 +115,24 @@ function App3(){
     
   )
 }
-export default App2;
+
+function App5() {
+  
+  return (
+    <div class="flex flex-col w-lvh">
+    <div class="flex flex-row w-full p-2">
+      <div class="basis-full h-14 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg">01</div>
+    </div>
+    <div class="flex flex-row w-full h-full p-2 space-x-2">
+      <div class="h-lvh w-80 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg p-2">01</div>
+      <div class="h-lvh w-1/3 min-w-96 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg p-2">02</div>
+      <div class="h-lvh w-96 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg p-2">03</div>
+    </div>
+    </div>
+  );
+}
+
+
+
+export default App5;
 

@@ -1,0 +1,10 @@
+| Tính năng                        | Biểu diễn trong Toán học thông thường                    | Biểu diễn trong Python       |
+|----------------------------------|--------------------------------------------------------|------------------------------|
+| Tập hợp rỗng                     | \\(\\emptyset\\) hoặc \\{\\}                           | `set()`                      |
+| Tạo tập hợp bằng cách liệt kê các phần tử                     | \\(\\{1, 2, 3\\}\\)                                    | `{1, 2, 3}`                  |
+| Hợp                              | \\(A \\cup B\\)                                        | `A.union(B)` hoặc `A \| B`    |
+| Giao                             | \\(A \\cap B\\)                                        | `A.intersection(B)` hoặc `A & B` |
+| Tập hợp con                      | \\(A \\subseteq B\\)                                   | `A.issubset(B)`              |
+| Tập hợp cha                      | \\(A \\supseteq B\\)                                   | `A.issuperset(B)`            |
+| Thành viên                       | \\(x \\in A\\)                                         | `x in A`                     |
+| tạo tập hợp bằng cách chỉ ra tính cách đặc trưng của các phần tử                        | \\(\\{x \\mid x \\text{ thỏa mãn điều kiện nào đó}\\}\\) | `{x for x in ... if dieukien(x)}`      |
