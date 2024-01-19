@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Example from './components/Menu';
 import MathExercise from './components/MathExercise';
 import b1 from './data/toan2.json';
+import congTruNhanChia from './data/toan3.json';
 import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -56,7 +57,7 @@ function App2() {
         <ul>
           <li class="mb-3 hover:bg-gray-700 p-2"><a href="/tap_hop_so_tu_nhien">Sơ bộ về tập hợp.
           Tập hợp các số tự nhiên. </a></li>
-          <li class="mb-3 hover:bg-gray-700 p-2">Các phép tính với số tự nhiên. </li>
+          <li class="mb-3 hover:bg-gray-700 p-2"><a href="/phep_tinh_so_tu_nhien">Các phép tính với số tự nhiên.</a></li>
           <li class="mb-3 hover:bg-gray-700 p-2">Tính chia hết trong tập hợp các số tự nhiên.  Số nguyên tố.  Ước chung và bội chung </li>
           <li class="mb-3 hover:bg-gray-700 p-2">Tập hợp các số nguyên  </li>
           <li class="mb-3 hover:bg-gray-700 p-2">Các phép tính với số nguyên. Tính chia hết trong tập hợp các số nguyên  </li>
@@ -70,6 +71,8 @@ function App2() {
         <Route path="/" element={<Main />}>
         </Route>
         <Route path="/tap_hop_so_tu_nhien" element={<App3 />} >
+        </Route>
+        <Route path="/phep_tinh_so_tu_nhien" element={<SectionExercises sectionExerciseList={congTruNhanChia} />} >
         </Route>
         <Route path="/mong_muon" element={<MongMuon />}>
 
@@ -93,19 +96,17 @@ const mathExercise = {
   "python_code": "import math\ndef solve_quadratic(a, b, c):\n    d = b**2 - 4*a*c\n    sol1 = (-b - math.sqrt(d)) / (2*a)\n    sol2 = (-b + math.sqrt(d)) / (2*a)\n    return sol1, sol2\n\n# Example usage\na, b, c = 1, 5, 6\nsolution = solve_quadratic(a, b, c)\nprint('The solutions are:', solution)"
 };
 
-function App3(){
-  
- 
+function SectionExercises({sectionExerciseList}){
   return(
     <div className="grid grid-flow-col">  
     <div className="flex-row p-10 overflow-y-auto items-start">
-    {b1.map(e =>
+    {sectionExerciseList.map(e =>
     <MathExercise exercise={e} />
   )}
     </div>
     <div>
       <ul className="w-64 h-scree np-5 hidden sm:block">
-      {b1.map(e => 
+      {sectionExerciseList.map(e => 
       <li><a href={"#"+e.trinket}>{e.title}</a></li>
       )
       }
@@ -113,6 +114,12 @@ function App3(){
     </div>
     </div>
     
+  )
+}
+
+function App3(){
+  return (
+    <SectionExercises sectionExerciseList={b1}></SectionExercises>
   )
 }
 
@@ -132,7 +139,18 @@ function App5() {
   );
 }
 
+function App6() {
+  return (
+    <>
+    <iframe
+  src="https://halean.github.io/JupyterLitePython/notebooks/?path=python.ipynb"
+  width="100%"
+  height="500px"
+>
+</iframe>
+    </>
+  )
+}
 
-
-export default App5;
+export default App2;
 
