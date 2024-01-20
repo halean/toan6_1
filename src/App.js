@@ -10,6 +10,7 @@ import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from './data/python_set_vs_math.txt';
+import { useEffect } from 'react';
 
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
   );
 }
 function App2() {
+  useEffect(() => {
+    document.title = 'Học toán lớp sáu bằng Python';
+  }, []);
+
   return (
   <>
    <nav className="flex flex-col sm:flex-row justify-between items-center bg-gray-800 text-white p-4">
@@ -97,9 +102,13 @@ const mathExercise = {
 };
 
 function SectionExercises({sectionExerciseList}){
+  var toggleSidebar = ()=>{document.getElementById("sidebar").classList.toggle("hidden")}
   return(
     <div className="grid grid-flow-col">  
+    
     <div className="flex-row p-10 overflow-y-auto items-start">
+    <div className="sticky-top-0">    <button class="sm:hidden mb-4" onClick={toggleSidebar}>☰ Menu</button></div>
+
     {sectionExerciseList.map(e =>
     <MathExercise exercise={e} />
   )}
