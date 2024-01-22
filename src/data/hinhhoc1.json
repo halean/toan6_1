@@ -1,0 +1,8 @@
+[
+    {
+      "title": "AI làm Toán ngang huy chương vàng Olympic",
+      "content": "Tác giả chính của <a className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' href='https://vnexpress.net/tien-si-viet-cong-bo-ai-lam-toan-ngang-huy-chuong-vang-olympic-4702072.html'>AlphaGeometry</a> là Trịnh Hoàng Triều, 29 tuổi, tiến sĩ vừa tốt nghiệp Đại học New York và Lương Minh Thắng, 36 tuổi, TS Đại học Stanford, Mỹ. Đồng hành cùng họ là ba nhà khoa học khác, trong đó có TS Lê Viết Quốc, 42 tuổi, người được mệnh danh là \"quái kiệt AI\" ở Google. Đoạn mã sau dùng code từ <a href='https://github.com/google-deepmind/alphageometry' className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' />tác giả</a> để chạy mô hình DDAR, giải được 14/30 bài toán hình học trong kỳ thi Olympic Toán quốc tế (IMO) giai đoạn 2000-2022.",
+      "further_reading_and_exercises": "/dist/notebooks/?path=alpha_fork/hinhhoc.ipynb",
+      "trinket":"hinhhoc"
+    }
+]

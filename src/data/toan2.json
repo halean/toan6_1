@@ -34,9 +34,14 @@
 {
   "title": "Bài 5: Các bài tập mở rộng",
   "content": "Các bài tập mở rộng này được soạn dưới dạng một notebook. Người dùng có thể thay đổi nội dung và chạy thử chương trình. Notebook này cần máy tính có cấu hình tốt để chạy.",
-  "further_reading_and_exercises": "https://halean.github.io/JupyterLitePython/notebooks/?path=Taphop.ipynb",
+  "further_reading_and_exercises": "/dist/notebooks/?path=Taphop.ipynb",
   "trinket":"12345678"
-
+},
+{
+  "title": "Bài 6: Đọc số tự nhiên",
+  "content": "Trong bài này, việc đọc số tự nhiên được dùng như một ví dụ để diễn tả sự gần gũi giữa chương trình máy tính và một bài toán đơn giản: đọc số tự nhiên. Chương trình mới nhìn thì hơi phức tạp, nhưng các phần chính của nó thì lại rất đơn giản và hoàn toàn tương đồng với việc đọc số tự nhiên: chia số cần đọc thành các hàng đơn vị, nghìn, triệu, đọc từng hàng, cuối cùng là ghép lại với nhau",
+  "further_reading_and_exercises": "/dist/notebooks/?path=Doc_So.ipynb",
+  "trinket":"12345679"
 }
 ]
 

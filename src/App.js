@@ -6,6 +6,7 @@ import Example from './components/Menu';
 import MathExercise from './components/MathExercise';
 import b1 from './data/toan2.json';
 import congTruNhanChia from './data/toan3.json';
+import hinhHoc from './data/hinhhoc1.json';
 import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
@@ -67,6 +68,10 @@ function App2() {
           <li class="mb-3 hover:bg-gray-700 p-2">Tập hợp các số nguyên  </li>
           <li class="mb-3 hover:bg-gray-700 p-2">Các phép tính với số nguyên. Tính chia hết trong tập hợp các số nguyên  </li>
         </ul>
+        <h1 class="text-xl mb-4">Hình Học</h1>
+        <ul>
+        <li class="mb-3 hover:bg-gray-700 p-2"><a href="/hinh_hoc_1">AI làm Toán</a></li>
+        </ul>
       </div>
       
       <Router>
@@ -82,8 +87,10 @@ function App2() {
         <Route path="/mong_muon" element={<MongMuon />}>
 
         </Route>
+        <Route path="/hinh_hoc_1" element={<SectionExercises sectionExerciseList={hinhHoc} />} >
+        </Route>
         <Route path="/toan_lop_sau" element={<ToanLopSau />}>
-
+        
         </Route>
         
       </Routes>

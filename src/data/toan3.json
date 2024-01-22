@@ -2,7 +2,7 @@
   {
     "title": "Bài 1: Cộng trừ nhân chia số tự nhiên bằng Python",
     "content": "Các đoạn mã mở rộng này được soạn dưới dạng một notebook. Người dùng có thể thay đổi nội dung và chạy thử chương trình. Notebook này cần máy tính có cấu hình tốt để chạy.",
-    "further_reading_and_exercises": "https://halean.github.io/JupyterLitePython/notebooks/?path=congtrunhanchia.ipynb",
+    "further_reading_and_exercises": "/dist/notebooks/?path=congtrunhanchia.ipynb",
     "trinket":"congtru1"
   }
 ]
