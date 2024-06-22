@@ -6,6 +6,8 @@ import Example from './components/Menu';
 import MathExercise from './components/MathExercise';
 import b1 from './data/toan2.json';
 import congTruNhanChia from './data/toan3.json';
+import chiaHet from './data/toan4.json';
+
 import hinhHoc from './data/hinhhoc1.json';
 import {Python, MongMuon, ToanLopSau, Main} from "./components/Python"
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
@@ -64,7 +66,7 @@ function App2() {
           <li class="mb-3 hover:bg-gray-700 p-2"><a href="/tap_hop_so_tu_nhien">Sơ bộ về tập hợp.
           Tập hợp các số tự nhiên. </a></li>
           <li class="mb-3 hover:bg-gray-700 p-2"><a href="/phep_tinh_so_tu_nhien">Các phép tính với số tự nhiên.</a></li>
-          <li class="mb-3 hover:bg-gray-700 p-2">Tính chia hết trong tập hợp các số tự nhiên.  Số nguyên tố.  Ước chung và bội chung </li>
+          <li class="mb-3 hover:bg-gray-700 p-2"><a href="/chiahet">Tính chia hết trong tập hợp các số tự nhiên.  Số nguyên tố.  Ước chung và bội chung </a> </li>
           <li class="mb-3 hover:bg-gray-700 p-2">Tập hợp các số nguyên  </li>
           <li class="mb-3 hover:bg-gray-700 p-2">Các phép tính với số nguyên. Tính chia hết trong tập hợp các số nguyên  </li>
         </ul>
@@ -83,6 +85,8 @@ function App2() {
         <Route path="/tap_hop_so_tu_nhien" element={<App3 />} >
         </Route>
         <Route path="/phep_tinh_so_tu_nhien" element={<SectionExercises sectionExerciseList={congTruNhanChia} />} >
+        </Route>
+        <Route path="/chiahet" element={<SectionExercises sectionExerciseList={chiaHet} />} >
         </Route>
         <Route path="/mong_muon" element={<MongMuon />}>
 
